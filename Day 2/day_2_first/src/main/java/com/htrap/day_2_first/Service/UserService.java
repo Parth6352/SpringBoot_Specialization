@@ -23,7 +23,7 @@ public class UserService {
         flag=1;
     }
 
-    UserDTO userDTO = new UserDTO();
+    UserDTO userDTO;
     UserModel userModel = new UserModel();
 
     ArrayList<UserDTO> userDTOArrayList = new ArrayList<>();
@@ -32,6 +32,7 @@ public class UserService {
             addData();
         }
         for(UserModel userModel1 : list){
+            userDTO = new UserDTO();
             userDTO.setId(userModel1.getId());
             userDTO.setFname(userModel1.getFname());
             userDTO.setEmail(userModel1.getEmail());
