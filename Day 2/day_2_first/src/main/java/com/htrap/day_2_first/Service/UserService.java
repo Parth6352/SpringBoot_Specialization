@@ -53,4 +53,13 @@ public class UserService {
         return userDTO;
     }
 
+    public UserDTO addData(UserModel userModel){
+        list.add(userModel);
+        userDTO.setId(userModel.getId());
+        userDTO.setFname(userModel.getFname());
+        userDTO.setEmail(userModel.getEmail());
+        userDTO.setEnroll(userModel.getEnroll());
+        return userDTO;
+    }
+
 }
